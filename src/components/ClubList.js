@@ -6,25 +6,32 @@ import './ClubList.scss';
 class ClubList extends React.Component {
   render() {
     return (
-      <ul className="clubs__list">
-        {this.props.clubs.map(club => (
-          <Club
-            key={club.id}
-            id={club.id}
-            name={club.name}
-            fa={club.fa}
-            members={club.members}
-          />
-        )
-        )}
+      <>
+        <input type="text" className="club__filter" onChange={this.props.filter} />
+        <ul className="clubs__list">
+          {this.props.clubs
+            .filter(club => club.name.toLowerCase().includes(this.props.query))
+            .map(club => (
+              <Club
+                key={club.id}
+                id={club.id}
+                name={club.name}
+                fa={club.fa}
+                members={club.members}
+              />
+            )
+            )}
 
-      </ul>
+        </ul>
+      </>
     )
   }
 }
 
 ClubList.propTypes = {
-  clubs: PropTypes.arrayOf(PropTypes.object)
+  clubs: PropTypes.arrayOf(PropTypes.object),
+  filter: PropTypes.func,
+  query: PropTypes.string
 }
 
 export default ClubList;
