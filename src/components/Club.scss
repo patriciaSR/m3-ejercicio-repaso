@@ -1,0 +1,29 @@
+.list__club{
+  margin: 0 20px;
+  padding: 20px;
+  background-color: white;
+  display:flex;
+}
+.list__club + .list__club{
+  margin-top: 20px;
+  
+}
+.club__icon{
+  width: 160px;
+  color: blue;
+  font-size: 100px;
+  text-align: center;
+}
+
+
+.members__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 160px 160px 160px;
+  grid-gap: 5px 20px;
+}
+.list__member{
+  
+}
