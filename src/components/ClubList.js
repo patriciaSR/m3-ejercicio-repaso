@@ -7,7 +7,8 @@ class ClubList extends React.Component {
   render() {
     return (
       <>
-        <input type="text" className="club__filter" onChange={this.props.filter} />
+        <label htmlFor="filter" className="club__filter-label">Filtra tu búsqueda</label>
+        <input id="filter" type="text" className="club__filter" onChange={this.props.filter} />
         <ul className="clubs__list">
           {this.props.clubs
             .filter(club => club.name.toLowerCase().includes(this.props.query))
