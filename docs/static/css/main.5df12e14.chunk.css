@@ -1,0 +1,2 @@
+body{margin:0}.list__club{margin:0 20px;padding:20px;background-color:#fff;display:flex}.list__club+.list__club{margin-top:20px}.club__icon{width:160px;color:#00f;font-size:100px;text-align:center}.members__list{display:grid;grid-template-columns:160px 160px 160px;grid-gap:5px 20px}.clubs__list,.members__list{list-style:none;margin:0;padding:0}.clubs__list{background-color:grey}
+/*# sourceMappingURL=main.5df12e14.chunk.css.map */
